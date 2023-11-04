@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: safeguard-configuration-service
+  namespace: flux-system
+spec:
+  interval: 30s
+  ref:
+    branch: ganga-test
+  url: https://github.com/SafeGuard-Cyber/safeguard-configuration-service
