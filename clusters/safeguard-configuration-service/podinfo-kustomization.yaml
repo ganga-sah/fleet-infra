@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: safeguard-configuration-service
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./deploy/k8s/base
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: safeguard-configuration-service
+  targetNamespace: flux-system
